@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto px-4 py-8">
+  <div class="min-h-screen pt-24 flex justify-center items-center px-4 py-8">
     <div v-if="isLoading" class="text-center py-20">
       <p class="text-2xl text-gray-500">Carregando detalhes do produto...</p>
     </div>

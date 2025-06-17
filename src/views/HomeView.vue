@@ -1,8 +1,14 @@
 <template>
-  <div class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold text-center mb-8 text-gray-800">Todos os Produtos</h1>
+  <div class="min-h-screen flex flex-col items-start px-4 ml-20">
+    <h1 class="text-4xl font-bold text-indigo-800 mt-10 mb-8">
+      Domingues Loja
+    </h1>
 
-    <div v-if="isLoading" class="text-center py-10">
+    <h2 class="text-3xl font-semibold mb-8 text-gray-800">
+      Todos os Produtos
+    </h2>
+
+    <div v-if="isLoading" class="text-left py-10">
       <p class="text-xl text-gray-500">Carregando produtos...</p>
     </div>
 
@@ -15,11 +21,12 @@
       />
     </div>
 
-    <div v-else class="text-center py-10">
+    <div v-else class="text-left py-10">
       <p class="text-xl text-gray-500">Nenhum produto encontrado.</p>
     </div>
 
-    <div v-if="!isLoading && products.length > 0 && totalPages > 1" class="flex justify-center items-center gap-4 mt-10">
+    <div v-if="!isLoading && products.length > 0 && totalPages > 1"
+         class="flex justify-start items-center gap-4 mt-10">
       <button @click="previousPage" :disabled="currentPage === 1"
               class="btn bg-gray-600 text-white px-6 py-2 rounded-md hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed">
         Anterior
@@ -32,6 +39,7 @@
     </div>
   </div>
 </template>
+
 
 <script setup>
 import { ref, onMounted, computed, watch } from 'vue'

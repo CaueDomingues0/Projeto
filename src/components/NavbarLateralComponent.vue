@@ -9,8 +9,11 @@
           type="text"
           v-model="searchQuery"
           placeholder="Pesquise por produtos..."
-          class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent text-sm"
+          class="w-full px-3 py-2 border border-gray-300 rounded-lg
+                focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-red-500
+                text-sm"
         />
+
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400">
           <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
         </svg>
@@ -44,7 +47,7 @@
 
       <!-- Nome da loja (centro) - Agora com posicionamento absoluto para centralização perfeita -->
       <div class="absolute left-1/2 transform -translate-x-1/2">
-        <h2 class="text-2xl font-bold text-indigo-800 whitespace-nowrap">Domingues Loja</h2>
+        <h2 class="text-2xl font-bold text-red-500 whitespace-nowrap">Domingues Loja</h2>
       </div>
 
       <!-- Ícones (direita) -->
