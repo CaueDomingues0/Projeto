@@ -1,9 +1,6 @@
 <template>
-  <!-- Navbar Horizontal -->
   <div class="fixed top-0 left-0 right-0 bg-white shadow-lg z-50">
-    <!-- Linha principal da navbar -->
     <div class="flex items-center px-4 py-3">
-      <!-- Barra de pesquisa (esquerda) -->
       <div class="w-80 relative">
         <input
           type="text"
@@ -18,7 +15,6 @@
           <path stroke-linecap="round" stroke-linejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
         </svg>
         
-        <!-- Resultados da pesquisa -->
         <div v-if="isSearching" class="absolute top-full left-0 right-0 bg-white border border-gray-300 rounded-md shadow-sm mt-1 p-2">
           <div class="text-xs text-gray-500">Buscando...</div>
         </div>
@@ -45,21 +41,17 @@
         </div>
       </div>
 
-      <!-- Nome da loja (centro) - Agora com posicionamento absoluto para centralização perfeita -->
       <div class="absolute left-1/2 transform -translate-x-1/2">
         <h2 class="text-2xl font-bold text-red-500 whitespace-nowrap">Domingues Loja</h2>
       </div>
 
-      <!-- Ícones (direita) -->
       <div class="ml-auto flex items-center space-x-4">
-        <!-- Ícone de usuário -->
         <button class="p-2 text-gray-600 hover:text-indigo-600 transition-colors duration-200">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
           </svg>
         </button>
 
-        <!-- Ícone de carrinho -->
         <button class="p-2 text-gray-600 hover:text-indigo-600 transition-colors duration-200 relative">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
@@ -67,7 +59,6 @@
           <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">0</span>
         </button>
 
-        <!-- Ícone de configurações -->
         <button class="p-2 text-gray-600 hover:text-indigo-600 transition-colors duration-200">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.241-.438.613-.43.992a6.759 6.759 0 0 1 0 .255c-.008.378.137.75.43.991l1.004.827c.424.35.534.955.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.281c-.09.543-.56.94-1.11.94h-2.594c-.55 0-1.019-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.991a6.932 6.932 0 0 1 0-.255c.007-.38-.138-.751-.43-.992l-1.004-.827a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.128.332-.183.582-.495.644-.869l.214-1.28Z" />
@@ -77,7 +68,6 @@
       </div>
     </div>
 
-    <!-- Linha das categorias -->
     <div class="border-t border-gray-200 py-2">
       <nav class="flex justify-center items-center space-x-6 flex-wrap">
         <router-link to="/" @click="clearSearch" class="flex items-center space-x-2 px-3 py-2 rounded-lg hover:bg-gray-100 text-gray-700 hover:text-indigo-600 transition-colors duration-200">
